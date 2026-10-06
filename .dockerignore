@@ -1,0 +1,11 @@
+.git
+.venv
+venv
+.idea
+.vscode
+__pycache__
+*.pyc
+db.sqlite3
+mysite/uploads
+data
+.env
