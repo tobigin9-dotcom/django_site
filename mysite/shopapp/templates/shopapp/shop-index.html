@@ -1,0 +1,26 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+  Shop
+{% endblock %}
+
+
+{% block body %}
+  <h1>Shop</h1>
+
+  <ul>
+    {% for product in products %}
+      <li>
+        <a href="{% url 'shopapp:product_details' pk=product.pk %}">{{ product.name }}</a>
+        for ${{ product.price }}
+      </li>
+    {% empty %}
+      <li>No products here</li>
+    {% endfor %}
+  </ul>
+
+  <div>
+    <a href="{% url 'shopapp:products_list' %}">All products</a> |
+    <a href="{% url 'shopapp:orders_list' %}">Orders</a>
+  </div>
+{% endblock %}

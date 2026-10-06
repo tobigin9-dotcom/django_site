@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "shop"
+version = "0.1.0"
+description = "Django online shop"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "4.2"
+djangorestframework = "3.14.0"
+django-filter = "22.1"
+Pillow = "^10.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
